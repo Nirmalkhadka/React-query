@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/tasks';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/tasks';
 
 export const fetchTasks = async ({ pageParam = 1 }) => {
   try {
