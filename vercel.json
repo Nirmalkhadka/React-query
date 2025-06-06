@@ -25,6 +25,6 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "/tasks"
+    "VITE_API_URL": "/tasks"
   }
 }
