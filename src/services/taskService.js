@@ -1,21 +1,15 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/tasks';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/tasks';
 
 export const fetchTasks = async ({ pageParam = 1 }) => {
   try {
-    // Fetch all tasks (or use a larger limit if server supports it)
     const response = await axios.get(`${API_URL}?_page=${pageParam}&_limit=3`);
     console.log('API Response:', response.data);
     const tasks = Array.isArray(response.data) ? response.data : [];
-    
-    // Simulate offset-based pagination client-side
-    const startIndex = (pageParam - 1) * 3;
-    const paginatedTasks = tasks.slice(startIndex, startIndex + 3);
-
     return {
-      tasks: paginatedTasks.filter((task) => task && task.id && typeof task.completed === 'boolean'),
-      nextPage: paginatedTasks.length === 3 ? pageParam + 1 : undefined,
+      tasks: tasks.filter((task) => task && task.id && typeof task.completed === 'boolean'),
+      nextPage: tasks.length === 3 ? pageParam + 1 : undefined,
     };
   } catch (error) {
     console.error('Fetch tasks error:', error.message);
