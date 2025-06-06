@@ -1,12 +1,44 @@
 {
   "tasks": [
-    { "id": 1, "title": "Learn React Query", "completed": false },
-    { "id": 2, "title": "Build Task Manager", "completed": true },
-    { "id": 3, "title": "Add Pagination", "completed": false },
-    { "id": 4, "title": "Implement Filtering", "completed": false },
-    { "id": 5, "title": "Test Error Handling", "completed": true },
-    { "id": 6, "title": "Deploy App", "completed": false },
-    { "id": 7, "title": "Write README", "completed": false },
-    { "id": 8, "title": "Add Tests", "completed": false }
+    {
+      "id": 2,
+      "title": "Build Task Manager",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Add Pagination",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Implement Filtering",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Test Error Handling",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Deploy App",
+      "completed": false
+    },
+    {
+      "id": 7,
+      "title": "Write README",
+      "completed": false
+    },
+    {
+      "id": 8,
+      "title": "Add Tests",
+      "completed": false
+    },
+    {
+      "title": "coding",
+      "completed": false,
+      "id": 9
+    }
   ]
 }
